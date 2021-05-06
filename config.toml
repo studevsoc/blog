@@ -1,0 +1,24 @@
+baseURL = "https://studevsoc.com/"
+title = "Student Developers Society"
+author = "Student Developers Society Community"
+copyright = "Made with ❤️. All original content is licensed under a free/libre copyleft license (GPL or CC BY-SA)."
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+
+[params.main]
+  enabled = true
+  description= "Bridging th gap between students and the industry."
+  img = "img/logo.svg"
