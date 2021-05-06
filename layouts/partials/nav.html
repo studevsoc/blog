@@ -7,11 +7,11 @@
     </label>
 
     <ul class="menu">
-      <a href="/">Home</a>
-      <a href="{% url 'blog' %}">Blog</a>
-      <a href="{% url 'about' %}">About</a>
-      <a href="/#contact">Contact</a>
-      <a href="{% url 'coc' %}">Code of Conduct</a>
+      <a href='/'>Home</a>
+      <a href='{{ "blog" | absURL }}'>Blog</a>
+      <a href='{{ "about" | absURL }}'>About</a>
+      <a href='/#contact'>Contact</a>
+      <a href='{{ "coc" | absURL }}'>Code of Conduct</a>
       <label for="chk" class="hide-menu-btn">
         <i class="fas fa-times"></i>
       </label>
