@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+      {{ if .IsHome}}
+        <title>{{.Site.Title}}</title>
+        <meta name="description" content="{{ .Site.Params.main.description  }}" >
+        <meta property="og:description" content="{{ .Site.Params.main.description }}"/>
+    {{else}}
+        <title>{{.Title}} | {{.Site.Title}}</title>
+        <meta name="description" content="{{.Title}}">
+        <meta property="og:site_name" content="{{ .Title }}" />
+        <meta property="og:title" content="{{ .Site.Title }}" />
+        <meta property="og:description" content="{{ .Site.Params.main.description }}"/>
+        <meta property="og:image" content="{{ .Site.Params.main.img | absURL }}" />
+    {{end}}
+  <link rel="shortcut icon" href='{{ "img/favicon.png" | absURL }}' type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href='{{"css/menu.css" | absURL }}'  type="text/css" media="screen" />
+  <link rel="stylesheet" href='{{"css/style.css" | absURL }}'  type="text/css" media="screen" />
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
+</head>
