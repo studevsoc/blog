@@ -15,8 +15,9 @@
     {{end}}
   <link rel="shortcut icon" href='{{ "img/favicon.png" | absURL }}' type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ $style := resources.Get "/sass/main.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="screen" >
   <link rel="stylesheet" href='{{"css/menu.css" | absURL }}'  type="text/css" media="screen" />
-  <link rel="stylesheet" href='{{"css/style.css" | absURL }}'  type="text/css" media="screen" />
   <!-- CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
 </head>
