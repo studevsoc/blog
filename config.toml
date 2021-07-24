@@ -1,5 +1,5 @@
 baseURL = "https://studevsoc.com/"
-title = "Student Developers Society"
+title = "Blog | Student Developers Society"
 author = "Student Developers Society Community"
 copyright = "Made with ❤️. All original content is licensed under a free/libre copyleft license (GPL or CC BY-SA)."
 paginate = 3
@@ -11,11 +11,25 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 
 [menu]
-
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "https://blog.studevsoc.com/"
+    weight = 10
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about/"
+    url = "https://studevsoc.com/about"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "https://studevsoc.com/#contact"
+    weight = 10
+  [[menu.main]]
+    identifier = "coc"
+    name = "Code of Conduct"
+    url = "https://studevsoc.com/coc"
     weight = 10
 
 [params.main]
