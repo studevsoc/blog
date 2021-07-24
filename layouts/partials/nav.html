@@ -1,17 +1,18 @@
 <div class="sticky">
   <div class="header">
-    <img class="logo" src='{{ "img/logo.svg" | absURL}}' alt="a dev" />
+      <a class="img-link" href="https://studevsoc.com/">
+          <img class="logo" src='{{ "img/logo.svg" | absURL}}' alt="a dev" />
+      </a>
     <input type="checkbox" id="chk">
     <label for="chk" class="show-menu-btn" style="align-items:center;color: black;">
       <i class="fas fa-bars"></i>
     </label>
 
     <ul class="menu">
-      <a href='/'>Home</a>
-      <a href='{{ "blog" | absURL }}'>Blog</a>
-      <a href='{{ "about" | absURL }}'>About</a>
-      <a href='/#contact'>Contact</a>
-      <a href='{{ "coc" | absURL }}'>Code of Conduct</a>
+         {{- $currentPage := . -}}
+        {{ range .Site.Menus.main -}}
+            <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        {{- end }}
       <label for="chk" class="hide-menu-btn">
         <i class="fas fa-times"></i>
       </label>
