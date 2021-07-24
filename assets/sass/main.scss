@@ -14,6 +14,9 @@
   align-items: center;
   margin: auto;
 }
+.post{
+  margin: 20px;
+}
 .small {
   display: none;
 }
@@ -23,6 +26,21 @@
 .link{
   color: #00B588;
   text-decoration: none;
+}
+.heading{
+  text-align: center;
+  margin-top: 5vh;
+}
+.tags{
+  display:flex;
+}
+.tag{
+  margin: 0px 10px 0px 0px;
+  background-color: #00B588;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
 }
 .footer {
   display: flex;
